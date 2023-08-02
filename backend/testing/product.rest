@@ -1,0 +1,40 @@
+
+#create product
+POST http://localhost:5000/api/products/
+Content-Type: application/json
+
+{
+    "name":"P1",
+    "sku":"SKUP1",
+    "category":"electronics",
+    "quantity":"10",
+    "price":"5",
+    "description":"P1"
+}
+###
+
+
+# get user products
+GET http://localhost:5000/api/products
+###
+
+#get single product
+GET http://localhost:5000/api/products/644826903268ff2a1a752b97
+###
+
+#delete single product
+DELETE http://localhost:5000/api/products/64482411a056156462b912b
+###
+
+#update product
+PATCH http://localhost:5000/api/products/644826903268ff2a1a752b97
+Content-Type: application/json
+
+{
+    "name":"P10",
+    "category":"computer",
+    "quantity":"10",
+    "price":"5",
+    "description":"this is desc",
+}
+###

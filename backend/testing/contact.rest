@@ -1,0 +1,10 @@
+
+#contact email form
+POST http://localhost:5000/api/contactus/
+Content-Type: application/json
+
+{
+    "subject":"This is contact subject",
+    "message":"this is contact message"
+}
+###

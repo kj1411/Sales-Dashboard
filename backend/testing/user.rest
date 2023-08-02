@@ -1,0 +1,70 @@
+#registerUser
+POST http://localhost:5000/api/users/register
+Content-Type: application/json
+
+{   
+    "name":"alex",
+    "email":"alexherts1411@gmail.com",
+    "password":"test1234",
+    "phone":"1234567890"
+}
+###
+
+#login User
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{   
+    "email":"user@gmail.com",
+    "password":"test1234"
+}
+###
+
+#logout User
+GET http://localhost:5000/api/users/logout
+###
+
+# get user data
+GET http://localhost:5000/api/users/getuser
+###
+
+#check login status
+GET http://localhost:5000/api/users/loggedin
+###
+
+#update user route patch request
+PATCH http://localhost:5000/api/users/updateuser
+Content-Type: application/json
+
+{   
+    "phone":"1234567890"
+}
+### 
+
+#change password
+PATCH http://localhost:5000/api/users/changepassword
+Content-Type: application/json
+
+{   
+    "newPassword":"test1234",
+    "oldPassword":"abcdefgh"
+}
+###
+
+#forgot password
+POST http://localhost:5000/api/users/forgotpassword
+Content-Type: application/json
+
+{   
+    "email":"alexherts1411@gmail.com"
+}
+###
+
+#Reset password goes after used forgot password
+PUT http://localhost:5000/api/users/resetpassword/69f9417a5986cf0f1bba86dea90f57b5bdd599043512867a92854f11d39b64f864477868e04cf7cebe1e12cb
+Content-Type: application/json
+
+{   
+    "password":"admin1234"
+}
+###
